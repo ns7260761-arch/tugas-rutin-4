@@ -1,0 +1,10 @@
+// =========================================================
+// MAIN.SCSS — 7-1 pattern entry point
+// Requirement #5: modular 7-1 structure (partials)
+// Requirement #7: @use everywhere, never @import
+// =========================================================
+@use "abstracts";     // variables + mixins (not output directly)
+@use "base";          // reset, typography
+@use "components";    // button, card, progress-bar, navbar
+@use "layout";        // grid, header, sidebar
+@use "pages";         // dashboard

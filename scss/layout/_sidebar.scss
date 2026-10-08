@@ -1,0 +1,17 @@
+// =========================================================
+// LAYOUT / SIDEBAR (Flexbox column)
+// =========================================================
+@use "sass:map";
+@use "../abstracts" as *;
+
+.sidebar {                                 // level 1
+  grid-area: sidebar;
+  width: $sidebar-width;
+  border-right: 1px solid $color-border;
+  padding: map.get($spacers, "lg") 0;
+  @include flex(column, space-between, center);
+
+  &__bottom {                              // level 2
+    @include flex(column, flex-start, center, map.get($spacers, "sm"));
+  }
+}

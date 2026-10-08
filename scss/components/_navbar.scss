@@ -1,0 +1,35 @@
+// =========================================================
+// COMPONENTS / NAVBAR (sidebar icon nav)
+// =========================================================
+@use "sass:map";
+@use "../abstracts" as *;
+
+.nav-rail {                                // level 1
+  @include flex(column, flex-start, center, map.get($spacers, "md"));
+
+  &__logo {                                // level 2
+    width: 40px;
+    height: 40px;
+    border-radius: $radius-sm;
+    background: linear-gradient(135deg, $color-accent-nebula, $color-accent-rose);
+    @include flex(row, center, center);
+    font-family: $font-display;
+    font-weight: 700;
+    margin-bottom: map.get($spacers, "lg");
+  }
+
+  &__link {                                // level 2
+    width: 44px;
+    height: 44px;
+    border-radius: $radius-sm;
+    color: $color-text-muted;
+    @include flex(row, center, center);
+    transition: background $transition-base, color $transition-base;
+
+    &:hover,
+    &.is-active {                          // level 3
+      background: $color-bg-panel-alt;
+      color: $color-accent-cyan;
+    }
+  }
+}

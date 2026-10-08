@@ -1,0 +1,35 @@
+// =========================================================
+// BASE / TYPOGRAPHY
+// =========================================================
+@use "../abstracts" as *;
+
+body {
+  font-family: $font-body;
+  font-size: $fs-base;
+  color: $color-text-primary;
+  background: $color-bg-deep;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-display;
+  line-height: 1.2;
+  color: $color-text-primary;
+}
+
+h1 { font-size: $fs-2xl; font-weight: 600; }
+h2 { font-size: $fs-xl;  font-weight: 600; }
+h3 { font-size: $fs-md;  font-weight: 600; }
+
+p {
+  color: $color-text-secondary;
+  max-width: 62ch;
+}
+
+small {
+  font-size: $fs-xs;
+  color: $color-text-muted;
+}

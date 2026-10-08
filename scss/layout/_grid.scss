@@ -1,0 +1,57 @@
+// =========================================================
+// LAYOUT / GRID
+// Main page structure uses CSS Grid; component internals use Flexbox.
+// =========================================================
+@use "sass:map";
+@use "../abstracts" as *;
+
+.app-shell {                               // level 1
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: $sidebar-width 1fr;
+  grid-template-rows: $header-height 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+}
+
+.site-header { grid-area: header; }
+
+.main-content {                            // level 1
+  grid-area: main;
+  padding: map.get($spacers, "lg");
+  display: grid;
+  gap: map.get($spacers, "md");
+  grid-template-columns: 1fr;
+
+  @include respond("md") {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Section-level grids reuse the same scale
+.stats-grid {                              // level 1
+  grid-column: 1 / -1;
+  display: grid;
+  gap: map.get($spacers, "md");
+  grid-template-columns: repeat(2, 1fr);
+
+  @include respond("md") {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.projects-grid {                           // level 1
+  grid-column: 1 / -1;
+  display: grid;
+  gap: map.get($spacers, "md");
+  grid-template-columns: 1fr;
+
+  @include respond("md") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skills-panel {                            // level 1
+  grid-column: 1 / -1;
+}

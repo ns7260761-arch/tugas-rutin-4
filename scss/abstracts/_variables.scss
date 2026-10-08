@@ -1,0 +1,78 @@
+// =========================================================
+// ABSTRACTS / VARIABLES
+// Requirement #2: variables for colors & spacing
+// =========================================================
+
+// ---- Colors ---------------------------------------------
+$color-bg-deep:      #0b0e1a; // deep space background
+$color-bg-panel:     #131829; // card / panel surface
+$color-bg-panel-alt: #1a2036; // hovered / alt surface
+$color-border:       #262d47;
+
+$color-text-primary:   #e8eaf0;
+$color-text-secondary: #9aa3bd;
+$color-text-muted:     #626a87;
+
+$color-accent-nebula: #7b61ff; // primary accent (nebula purple)
+$color-accent-cyan:   #2dd4bf; // secondary accent
+$color-accent-gold:   #f2c94c; // highlight / star gold
+$color-accent-rose:   #ff6b9d; // tertiary accent for variety
+
+$color-success: #3ecf8e;
+$color-warning: $color-accent-gold;
+$color-danger:  #ff5470;
+
+// A map so components can loop over the palette (used by @each below)
+$brand-colors: (
+  "nebula": $color-accent-nebula,
+  "cyan":   $color-accent-cyan,
+  "gold":   $color-accent-gold,
+  "rose":   $color-accent-rose,
+);
+
+// ---- Spacing scale (used instead of magic numbers) -------
+$space-unit: 4px;
+
+$spacers: (
+  "3xs": $space-unit * 1,  // 4px
+  "2xs": $space-unit * 2,  // 8px
+  "xs":  $space-unit * 3,  // 12px
+  "sm":  $space-unit * 4,  // 16px
+  "md":  $space-unit * 6,  // 24px
+  "lg":  $space-unit * 8,  // 32px
+  "xl":  $space-unit * 12, // 48px
+  "2xl": $space-unit * 16, // 64px
+  "3xl": $space-unit * 24, // 96px
+);
+
+// ---- Typography -------------------------------------------
+$font-display: "Space Grotesk", "Segoe UI", sans-serif;
+$font-body:    "Inter", "Segoe UI", sans-serif;
+
+$fs-xs:   0.75rem;
+$fs-sm:   0.875rem;
+$fs-base: 1rem;
+$fs-md:   1.125rem;
+$fs-lg:   1.5rem;
+$fs-xl:   2rem;
+$fs-2xl:  2.75rem;
+
+// ---- Radius & shadow ---------------------------------------
+$radius-sm: 8px;
+$radius-md: 14px;
+$radius-lg: 22px;
+
+$shadow-soft: 0 20px 40px -20px rgba(#000, 0.55);
+
+// ---- Breakpoints --------------------------------------------
+$breakpoints: (
+  "sm": 480px,
+  "md": 768px,
+  "lg": 1080px,
+  "xl": 1320px,
+);
+
+// ---- Layout ----------------------------------------------
+$sidebar-width: 88px;
+$header-height: 72px;
+$transition-base: 0.25s ease;

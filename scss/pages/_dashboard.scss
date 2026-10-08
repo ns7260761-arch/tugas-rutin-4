@@ -1,0 +1,36 @@
+// =========================================================
+// PAGES / DASHBOARD
+// Page-specific composition — everything reusable already
+// lives in components/ and layout/.
+// =========================================================
+@use "sass:map";
+@use "../abstracts" as *;
+
+.section-title {                           // level 1
+  @include flex(row, space-between, center);
+  margin-bottom: map.get($spacers, "sm");
+
+  a {                                      // level 2
+    font-size: $fs-sm;
+    color: $color-accent-cyan;
+  }
+}
+
+.avatar-ring {                             // level 1
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 2px;
+  background: conic-gradient(
+    from 0deg,
+    $color-accent-nebula,
+    $color-accent-cyan,
+    $color-accent-gold,
+    $color-accent-nebula
+  );
+
+  img {                                    // level 2
+    border-radius: 50%;
+    border: 2px solid $color-bg-deep;
+  }
+}

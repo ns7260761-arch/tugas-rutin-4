@@ -1,0 +1,36 @@
+// =========================================================
+// COMPONENTS / BUTTON
+// Requirement #6: @each loop generating utility classes
+// =========================================================
+@use "sass:map";
+@use "../abstracts" as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: map.get($spacers, "2xs");
+  padding: map.get($spacers, "xs") map.get($spacers, "md");
+  border-radius: $radius-sm;
+  font-family: $font-body;
+  font-size: $fs-sm;
+  font-weight: 600;
+  transition: transform $transition-base, filter $transition-base;
+
+  &--ghost {
+    background: transparent;
+    border: 1px solid $color-border;
+    color: $color-text-primary;
+
+    &:hover {
+      border-color: $color-accent-nebula;
+    }
+  }
+}
+
+// Generates .btn-nebula, .btn-cyan, .btn-gold, .btn-rose
+// from the $brand-colors map defined in abstracts/_variables.scss
+@each $name, $value in $brand-colors {
+  .btn-#{$name} {
+    @include button-variant($value);
+  }
+}

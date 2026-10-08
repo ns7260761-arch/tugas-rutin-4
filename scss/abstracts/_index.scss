@@ -1,0 +1,4 @@
+// Forwards everything in /abstracts so other layers only need
+// one @use "../abstracts" as * statement.
+@forward "variables";
+@forward "mixins";

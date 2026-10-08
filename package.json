@@ -1,0 +1,13 @@
+{
+  "name": "tugas-rutin-4-scss",
+  "version": "1.0.0",
+  "description": "Konversi CSS ke SCSS - Dashboard/Portofolio - struktur 7-1 pattern",
+  "scripts": {
+    "build": "sass scss/main.scss css/main.css --style=expanded --no-source-map",
+    "build:min": "sass scss/main.scss css/main.min.css --style=compressed --no-source-map",
+    "watch": "sass --watch scss/main.scss css/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}

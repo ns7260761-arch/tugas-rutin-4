@@ -1,0 +1,63 @@
+// =========================================================
+// COMPONENTS / CARD
+// Requirement #3: nesting, max 3 levels deep
+// =========================================================
+@use "sass:map";
+@use "../abstracts" as *;
+
+.card {                                   // level 1
+  @include card;
+
+  &:hover {                               // level 2
+    transform: translateY(-4px);
+    border-color: $color-accent-nebula;
+  }
+
+  &__header {                             // level 2
+    @include flex(row, space-between, center);
+    margin-bottom: map.get($spacers, "sm");
+
+    h3 {                                  // level 3
+      margin: 0;
+    }
+  }
+
+  &__icon {                               // level 2
+    width: 40px;
+    height: 40px;
+    border-radius: $radius-sm;
+    @include flex(row, center, center);
+    background: rgba($color-accent-nebula, 0.15);
+    color: $color-accent-nebula;
+  }
+
+  &__body {                               // level 2
+    color: $color-text-secondary;
+    font-size: $fs-sm;
+  }
+
+  &__footer {                             // level 2
+    margin-top: map.get($spacers, "sm");
+    display: flex;
+    gap: map.get($spacers, "2xs");
+
+    .tag {                                // level 3
+      font-size: $fs-xs;
+      padding: 2px map.get($spacers, "2xs");
+      border-radius: 999px;
+      background: $color-bg-panel-alt;
+      color: $color-text-muted;
+    }
+  }
+
+  // stat-card variant
+  &--stat {                               // level 2
+    text-align: left;
+
+    .card__value {                        // level 3
+      font-family: $font-display;
+      font-size: $fs-xl;
+      font-weight: 600;
+    }
+  }
+}

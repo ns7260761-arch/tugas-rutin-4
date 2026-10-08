@@ -1,0 +1,27 @@
+// =========================================================
+// LAYOUT / HEADER
+// =========================================================
+@use "sass:map";
+@use "../abstracts" as *;
+
+.site-header {                             // level 1
+  height: $header-height;
+  @include flex(row, space-between, center);
+  padding: 0 map.get($spacers, "lg");
+  border-bottom: 1px solid $color-border;
+  position: sticky;
+  top: 0;
+  background: rgba($color-bg-deep, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+
+  &__title {                               // level 2
+    small {                                // level 3
+      display: block;
+    }
+  }
+
+  &__actions {                             // level 2
+    @include flex(row, flex-end, center, map.get($spacers, "sm"));
+  }
+}

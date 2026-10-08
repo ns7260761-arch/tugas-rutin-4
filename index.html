@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nayla — Dashboard Portofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- ============ SIDEBAR (Flexbox column) ============ -->
+    <aside class="sidebar">
+      <nav class="nav-rail" aria-label="Navigasi utama">
+        <div class="nav-rail__logo">N</div>
+        <a class="nav-rail__link is-active" href="#overview" aria-label="Overview">🪐</a>
+        <a class="nav-rail__link" href="#skills" aria-label="Skills">✨</a>
+        <a class="nav-rail__link" href="#projects" aria-label="Projects">🚀</a>
+        <a class="nav-rail__link" href="#contact" aria-label="Contact">📡</a>
+      </nav>
+      <div class="sidebar__bottom">
+        <a class="nav-rail__link" href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">🔗</a>
+      </div>
+    </aside>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header">
+      <div class="site-header__title">
+        <h1 style="font-size: 1.25rem;">Dashboard Portofolio</h1>
+        <small>Ilmu Komputer · Universitas Negeri Medan</small>
+      </div>
+      <div class="site-header__actions">
+        <a class="btn btn--ghost" href="#contact">Hubungi Saya</a>
+        <div class="avatar-ring">
+          <img src="https://api.dicebear.com/7.x/shapes/svg?seed=nayla" alt="Foto profil Nayla" width="40" height="40" />
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ MAIN CONTENT (CSS Grid) ============ -->
+    <main class="main-content" id="overview">
+
+      <!-- Stat cards -->
+      <section class="stats-grid" aria-label="Ringkasan">
+        <article class="card card--stat">
+          <div class="card__icon">💻</div>
+          <p class="card__value">6</p>
+          <p class="card__body">Proyek diselesaikan</p>
+        </article>
+        <article class="card card--stat">
+          <div class="card__icon">📚</div>
+          <p class="card__value">Semester 3</p>
+          <p class="card__body">Program studi Ilmu Komputer</p>
+        </article>
+        <article class="card card--stat">
+          <div class="card__icon">🧩</div>
+          <p class="card__value">4</p>
+          <p class="card__body">Mata kuliah aktif</p>
+        </article>
+        <article class="card card--stat">
+          <div class="card__icon">🌌</div>
+          <p class="card__value">SCSS</p>
+          <p class="card__body">Fokus tugas rutin ini</p>
+        </article>
+      </section>
+
+      <!-- Skills -->
+      <section class="skills-panel" id="skills">
+        <div class="section-title">
+          <h2>Keahlian</h2>
+          <a href="#projects">Lihat proyek →</a>
+        </div>
+        <div class="card">
+          <div class="progress__row">
+            <span>Editing Video</span><span>95%</span>
+          </div>
+          <div class="progress__track">
+            <div class="progress__fill w-95"></div>
+          </div>
+
+          <div class="progress__row" style="margin-top: 16px;">
+            <span>Desain </span><span>85%</span>
+          </div>
+          <div class="progress__track">
+            <div class="progress__fill w-85"></div>
+          </div>
+
+          <div class="progress__row" style="margin-top: 16px;">
+            <span>JavaScript (fetch, async/await)</span><span>70%</span>
+          </div>
+          <div class="progress__track">
+            <div class="progress__fill w-70"></div>
+          </div>
+
+          <div class="progress__row" style="margin-top: 16px;">
+            <span>Java / OOP</span><span>65%</span>
+          </div>
+          <div class="progress__track">
+            <div class="progress__fill w-65"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="projects-grid" id="projects" aria-label="Proyek">
+        <article class="card">
+          <div class="card__header">
+            <h3>Personal Landing Page</h3>
+            <div class="card__icon">🌠</div>
+          </div>
+          <p class="card__body">Landing page bertema galaksi dengan HTML5 semantik dan progress bar skill (Tugas Rutin 1).</p>
+          <div class="card__footer">
+            <span class="tag">HTML5</span><span class="tag">CSS</span>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__header">
+            <h3>CSS Layouting Portofolio</h3>
+            <div class="card__icon">🧱</div>
+          </div>
+          <p class="card__body">Membangun ulang layout portofolio memakai kombinasi CSS Grid &amp; Flexbox (Tugas Rutin 2).</p>
+          <div class="card__footer">
+            <span class="tag">Grid</span><span class="tag">Flexbox</span>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__header">
+            <h3>Konversi CSS ke SCSS</h3>
+            <div class="card__icon">🪐</div>
+          </div>
+          <p class="card__body">Dashboard ini sendiri — dibangun dengan struktur SCSS 7-1, variables, mixins, dan loop (Tugas Rutin 4).</p>
+          <div class="card__footer">
+            <span class="tag">SCSS</span><span class="tag">7-1 Pattern</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- Contact -->
+      <section class="projects-grid" id="contact" aria-label="Kontak" style="grid-template-columns: 1fr;">
+        <article class="card">
+          <div class="card__header">
+            <h3>Mari terhubung</h3>
+          </div>
+          <p class="card__body">Terbuka untuk kolaborasi proyek web dan tugas kelompok.</p>
+          <div class="card__footer">
+            <a class="btn btn-nebula" href="mailto:nayla@example.com">Kirim Email</a>
+            <a class="btn btn-cyan" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
